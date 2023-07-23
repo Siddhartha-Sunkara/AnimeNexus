@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import React from "react";
 import Slider from '../components/Slider'
 import Link from "next/link";
-import SearchBar from "../components/SearchBar"
+// import SearchBar from "../components/SearchBar"
 import SwiperTemp from "../components/Swiper"
 async function getData(currentPage) {
 

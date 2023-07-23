@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import Searchbar from "./SearchBar";
+// import Searchbar from "./SearchBar";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
