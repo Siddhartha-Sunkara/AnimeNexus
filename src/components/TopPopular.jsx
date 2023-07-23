@@ -34,7 +34,7 @@ export default async function TopPopular({slice}) {
   const toppopular= await getData();
   return (
     <>
-      <p className="text-xl font-['Press_Start_2P'] xl:text-xl text-[#faf4fa] font-bold w-full flex pt-10 xl:p-5 justify-center">
+      <p className="text-lg font-['Press_Start_2P'] xl:text-xl text-[#faf4fa] font-bold w-full flex py-10 xl:p-5 justify-center">
           Top Popular Anime
         </p>
         {Array.isArray(toppopular) && toppopular.slice(0,sliceid).map((datas,index) => (

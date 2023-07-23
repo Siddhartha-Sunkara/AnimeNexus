@@ -33,7 +33,7 @@ export default async function TopAiring({slice}) {
   const topairing= await getData();
   return (
     <>
-      <p className="text-xl font-['Press_Start_2P'] xl:text-xl  text-[#faf4fa] font-bold w-full flex pt-10 xl:p-5 justify-center">
+      <p className="text-lg font-['Press_Start_2P'] xl:text-xl  text-[#faf4fa] font-bold w-full flex py-10 xl:p-5 justify-center">
           Top Airing Anime
         </p>
         

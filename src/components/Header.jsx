@@ -69,22 +69,22 @@ const Header = () => {
             </div>
             <ul className="flex flex-col  font-['Press_Start_2P'] px-10 sm:px-20 pb-20 text-[14px] text-black  gap-10 justify-center h-full items-center">
               <li>
-                <Link href="/First/1" className="hover:text-[#7053ff]">
+                <Link onClick={handleClose} href="/First/1" className="hover:text-[#7053ff]">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/TopAnime" className="hover:text-[#7053ff]">
+                <Link onClick={handleClose} href="/TopAnime" className="hover:text-[#7053ff]">
                   Top Anime
                 </Link>
               </li>
               <li>
-                <Link href="/Suggestions" className="hover:text-[#7053ff]">
+                <Link  onClick={handleClose} href="/Suggestions" className="hover:text-[#7053ff]">
                   Get Suggestions
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-[#7053ff]">
+                <Link onClick={handleClose} href="#" className="hover:text-[#7053ff]">
                   Genre
                 </Link>
               </li>

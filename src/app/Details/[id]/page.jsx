@@ -21,7 +21,7 @@ const Page = async ({ params }) => {
       <div className="">
          <PageWrapper>
         <div className=" h-[60vh] hero flex h-full bg-red-400">
-          <div className="left w-[60%] flex h-full  bg-[#0c0a0b] text-[#faf4fa] ">
+          <div className="left w-full 2xl:w-[60%] flex flex-col items-center md:items-start md:flex-row h-full  bg-[#0c0a0b] text-[#faf4fa] ">
             <div className="img w-[200px] h-[300px] m-10">
               <Image
                 src={incomingData.image}
@@ -30,14 +30,14 @@ const Page = async ({ params }) => {
                 height={300}
               ></Image>
             </div>
-            <div className="content flex flex-col gap-10 p-10 w-[70%]">
-              <div className="div flex gap-10">
+            <div className="content flex flex-col items-center md:items-start md:justify-start justify-center gap-10 p-5 md:p-10 w-[70%]">
+              <div className="div w-full text-[10px] md:text-base flex  items-center md:items-start  justify-center md:justify-start gap-10  ">
                 <Link href="/">Home</Link>
                 <p>{incomingData.type}</p>
                 <p>{incomingData.title}</p>
               </div>
-              <div className="flex flex-col gap-5">
-                <p className="text-4xl font-bold">{incomingData.title}</p>
+              <div className="flex flex-col gap-5 w-full items-center md:items-start justify-center md:justify-start">
+                <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-center md:text-left">{incomingData.title}</p>
                 <p className="text-xl font-bold">
                   #{incomingData.ranking}{" "}
                   <span className="text-[#fddb93]">Ranking</span>
@@ -49,33 +49,34 @@ const Page = async ({ params }) => {
               </div>
   
               <div>
-                <button className="h-12 w-40 bg-red-800 rounded-[24px] bg-[#7053ff]">
+                <button className="h-12 w-40 text-[#040203] rounded-[24px] bg-[#7053ff]">
                   <Link href={incomingData.link} target="_blank">
                     Go to Main Site
                   </Link>
                 </button>
               </div>
               <div className="synopsis">
-                <p className="text-justify">
+                <p className="text-justify flex flex-col gap-1 text-[12px] md:text-[14px] py-10 md:py-0">
+                  <span className="font-semibold text-[14px]  md:text-base">Synopsis:</span>
                   {incomingData.synopsis?.substring(0, 500)}...
                 </p>
               </div>
             </div>
           </div>
-          <div className="right w-[40%] flex justify-center bg-[#040203] text-[#faf4fa]">
+          <div className="right w-[40%] hidden 2xl:flex justify-center bg-[#040203] text-[#faf4fa]">
             <div className="w-[60%] bg-[#0c0a0b] flex items-center justify-center">
               <div className="flex flex-col gap-5">
                 <div>
                   <p className="text-[18px] font-semibold">More Details</p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p className="status">
-                    <span className=" font-semibold">Status:</span>{" "}
+                  <p className="status text-[14px]">
+                    <span className=" font-semibold text-base">Status:</span>{" "}
                     {incomingData.status}
                   </p>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <p className="font-semibold">Alternative Titles :</p>
+                <div className="flex flex-col gap-2 text-[14px]">
+                  <p className="font-semibold text-base">Alternative Titles :</p>
                   {incomingData.alternativeTitles?.map((alt, index) => (
                     <ul>
                       <li key={index}>{alt}</li>
@@ -89,7 +90,7 @@ const Page = async ({ params }) => {
                       <ul>
                         <li
                           key={index}
-                          className="  h-8 bg-[#7053ff] w-fit rounded-[24px] p-2 flex items-center"
+                          className="  h-8 bg-[#7053ff] text-[14px] w-fit rounded-[24px] p-2 flex items-center"
                         >
                           {gen}
                         </li>
@@ -99,7 +100,7 @@ const Page = async ({ params }) => {
                 </div>
   
                 <Link href={incomingData.link} target="_blank">
-                  <p>
+                  <p className="text-[14px] hover:underline">
                     See this on <span className=""> MyAnimeList</span>
                   </p>
                 </Link>
@@ -107,11 +108,11 @@ const Page = async ({ params }) => {
             </div>
           </div>
         </div>
-        <div className="flex gap-10 justify-center m-10 ">
-          <div>
+        <div className="flex-col bg-[#040203] flex xl:flex-row gap-10 justify-center p-10 ">
+          <div className="xl:w-[30%]">
             <TopAiring slice={10} />
           </div>
-          <div className="w-[30%]">
+          <div className="xl:w-[30%]">
             <TopPopular slice={10} />
           </div>
         </div>
