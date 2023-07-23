@@ -29,7 +29,8 @@
   },
   "devDependencies": {
     "@types/node": "20.4.2",
-    "daisyui": "^3.2.1"
+    "daisyui": "^3.2.1",
+    "typescript": "^5.1.6"
   },
   "main": "index.js",
   "repository": "https://github.com/Siddhartha-Sunkara/AnimeNexus.git",
