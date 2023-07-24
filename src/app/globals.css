@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -171,4 +173,32 @@ body {
 }
 .close:after {
   transform: rotate(-45deg);
+}
+
+.para{
+  /* text-shadow:  5px 0 5px ; */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 17rem;
+}
+
+@keyframes scroll{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+.slide:hover{
+  animation-play-state: paused;
+}
+.slide-track{
+  animation: scroll 80s linear infinite;
+width: 3840px;
+}
+
+.fav{
+  letter-spacing: -8px;
+  line-height: 0.9;
 }
