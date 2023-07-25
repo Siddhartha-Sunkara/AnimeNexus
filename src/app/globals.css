@@ -197,6 +197,12 @@ body {
   animation: scroll 80s linear infinite;
 width: 3840px;
 }
+@media only screen and (max-width: 768px){
+  .slide-track {
+    animation: scroll 80s linear infinite;
+width: 3840px;
+  }
+}
 
 .fav{
   letter-spacing: -8px;

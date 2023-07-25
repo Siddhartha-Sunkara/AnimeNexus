@@ -4,6 +4,8 @@ import React from "react";
 import Slider from '../components/Slider'
 import Link from "next/link";
 import Image from "next/image";
+import Footer from '../components/Footer'
+import Fav from "../components/Fav"
 // import SearchBar from "../components/SearchBar"
 import SwiperTemp from "../components/Swiper"
 // async function getData(currentPage) {
@@ -193,7 +195,7 @@ export default async function Main({ params }) {
         
       </div>
       <div className="text-white font-['Inter'] w-full text-[50px] md:text-[80px] xl:text-[120px] xl:text-[160px] flex item-center justify-center">
-    <p className=" p-20"><span className="text-[#7053ff]">A</span>nime<span className="text-[#7053ff]">N</span>exus
+    <p className=" font-semibold py-20"><span className="text-[#7053ff]">A</span>nime<span className="text-[#7053ff]">N</span>exus
     <span className="text-[#7053ff]">.</span></p>
     
   </div>
@@ -203,12 +205,10 @@ export default async function Main({ params }) {
             <span className="text-[#7053ff]">N</span>exus</span></p>
       <Image src={new3} alt="anime" className="anime  w-[100%]  " placeholder="blur"  /> */}
     </div>
-    <div className="text-white font-['Darker Grotesque']  text-[80px] md:text-[156px] xl:text-[222px] 2xl:text-[272px]">
-    <p className="fav p-10">Your <br/> Favourite <br/> Anime<span className="text-[#7053ff]">.</span></p>
-    
-  </div>
+    <Fav/>
   
   </div>
+  <Footer/>
     </>
   );
 };
