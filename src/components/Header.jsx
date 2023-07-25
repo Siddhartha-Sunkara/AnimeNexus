@@ -1,10 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { UserAuth } from "../app/context/AuthContext";
 // import Searchbar from "./SearchBar";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const { user, googleSignIn, logOut } = UserAuth();
+  const [loading, setLoading] = useState(true);
+  const handleSignIn = async () => {
+    try {
+      await googleSignIn();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleSignOut = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleOpen = () => {
     setOpen(true);
@@ -13,6 +30,15 @@ const Header = () => {
     setOpen(false);
   };
 
+  useEffect(() => {
+    const checkAuth = async () => {
+      await new Promise((resolve) => {
+        setTimeout(resolve, 50);
+        setLoading(false);
+      });
+    };
+    checkAuth();
+  }, [user]);
   return (
     <header className="h-[10vh] w-full bg-[#040203] text-[#fffffe]">
       <div className="flex h-full px-5 md:px-10 items-center justify-between">
@@ -42,11 +68,26 @@ const Header = () => {
                 Get Suggestions
               </Link>
             </li>
-            <li>
-              <Link href="#" className="hover:text-[#7053ff]">
-                Genre
-              </Link>
-            </li>
+            {loading? null : !user ? (
+                <li onClick={handleSignIn}>
+                  <Link href="#" className="hover:text-[#7053ff]">
+                    Login
+                  </Link>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <p className="hover:text-[#7053ff]">
+                      Welcome {user.displayName}
+                    </p>
+                  </li>
+                  <li onClick={handleSignOut}>
+                    <p className="hover:text-[#7053ff] cursor-pointer">
+                      Sign Out
+                    </p>
+                  </li>
+                </>
+              )}
           </ul>
         </div>
         <div className="mobile z-10 flex lg:hidden">
@@ -69,25 +110,52 @@ const Header = () => {
             </div>
             <ul className="flex flex-col  font-['Press_Start_2P'] px-10 sm:px-20 pb-20 text-[14px] text-black  gap-10 justify-center h-full items-center">
               <li>
-                <Link onClick={handleClose} href="/First/1" className="hover:text-[#7053ff]">
+                <Link
+                  onClick={handleClose}
+                  href="/First/1"
+                  className="hover:text-[#7053ff]"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link onClick={handleClose} href="/TopAnime" className="hover:text-[#7053ff]">
+                <Link
+                  onClick={handleClose}
+                  href="/TopAnime"
+                  className="hover:text-[#7053ff]"
+                >
                   Top Anime
                 </Link>
               </li>
               <li>
-                <Link  onClick={handleClose} href="/Suggestions" className="hover:text-[#7053ff]">
+                <Link
+                  onClick={handleClose}
+                  href="/Suggestions"
+                  className="hover:text-[#7053ff]"
+                >
                   Get Suggestions
                 </Link>
               </li>
-              <li>
-                <Link onClick={handleClose} href="#" className="hover:text-[#7053ff]">
-                  Genre
-                </Link>
-              </li>
+              {loading? null : !user ? (
+                <li onClick={handleSignIn}>
+                  <Link href="#" className="hover:text-[#7053ff]">
+                    Login
+                  </Link>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <p className="hover:text-[#7053ff]">
+                      Welcome {user.displayName}
+                    </p>
+                  </li>
+                  <li onClick={handleSignOut}>
+                    <p className="hover:text-[#7053ff] cursor-pointer">
+                      Sign Out
+                    </p>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>

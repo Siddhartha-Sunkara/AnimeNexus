@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
-
+import {AuthContextProvider} from  './context/AuthContext'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,8 +16,10 @@ export default function RootLayout({ children }) {
         <link rel='icon' href='/Logo.png' />
       </head>
       <body className={inter.className}>
+        <AuthContextProvider>
         <Header />
         {children}
+        </AuthContextProvider>
       </body>
     </html>
   )
