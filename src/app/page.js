@@ -40,7 +40,7 @@ export default async function Main({ params }) {
       <div className="h-[60%] flex gap-5 overflow-hidden">
         <div className=" h-full slide-track w-[200%]  bg-[#040203] flex gap-10  ">
           <div className="slide w-[384px] bg-blue-300 rounded-t-full overflow-hidden ">
-            <video src="./assets/aot.mp4" autoPlay loop muted controls />
+            <video src="/assets/aot.mp4" autoPlay loop muted controls />
           </div>
           <div className="slide w-[576px] flex flex-col  gap-5   bg-[#040203]">
             <div className="upper flex h-[50%]  gap-10   ">
@@ -74,10 +74,10 @@ export default async function Main({ params }) {
             </div>
           </div>
           <div className="slide w-[960px] bg-blue-300">
-            <video src="./assets/onepiece1.mp4" autoPlay loop muted controls />
+            <video src="/assets/onepiece1.mp4" autoPlay loop muted controls />
           </div>
           <div className="slide w-[384px] bg-blue-300 rounded-t-[30%] overflow-hidden ">
-            <video src="./assets/jjk.mp4" autoPlay loop muted controls />
+            <video src="/assets/jjk.mp4" autoPlay loop muted controls />
           </div>
           <div className=" slide w-[576px] flex flex-col  gap-5    bg-[#040203]">
             <div className="upper h-[50%] bg-red-600 rounded-full overflow-hidden">
@@ -112,12 +112,12 @@ export default async function Main({ params }) {
             </div>
           </div>
           <div className="slide w-[960px] bg-blue-300">
-            <video src="./assets/demon1.mp4" autoPlay loop muted controls />
+            <video src="/assets/demon1.mp4" autoPlay loop muted controls />
           </div>
         </div>
         <div className=" h-full slide-track w-[200%]  bg-[#040203] flex gap-10  ">
           <div className="slide w-[384px] bg-blue-300 rounded-t-full overflow-hidden ">
-            <video src="./assets/aot.mp4" autoPlay loop muted controls />
+            <video src="/assets/aot.mp4" autoPlay loop muted controls />
           </div>
           <div className="slide w-[576px] flex flex-col  gap-5   bg-[#040203]">
             <div className="upper flex h-[50%]  gap-10   ">
@@ -151,10 +151,10 @@ export default async function Main({ params }) {
             </div>
           </div>
           <div className="slide w-[960px] bg-blue-300">
-            <video src="./assets/onepiece1.mp4" autoPlay loop muted controls />
+            <video src="/assets/onepiece1.mp4" autoPlay loop muted controls />
           </div>
           <div className="slide w-[384px] bg-blue-300 rounded-t-[30%] overflow-hidden ">
-            <video src="./assets/jjk.mp4" autoPlay loop muted controls />
+            <video src="/assets/jjk.mp4" autoPlay loop muted controls />
           </div>
           <div className=" slide w-[576px] flex flex-col  gap-5    bg-[#040203]">
             <div className="upper h-[50%] bg-red-600 rounded-full overflow-hidden">
@@ -189,7 +189,7 @@ export default async function Main({ params }) {
             </div>
           </div>
           <div className="slide w-[960px] bg-blue-300">
-            <video src="./assets/demon1.mp4" autoPlay loop muted controls />
+            <video src="/assets/demon1.mp4" autoPlay loop muted controls />
           </div>
         </div>
         
