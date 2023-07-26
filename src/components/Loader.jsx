@@ -14,7 +14,7 @@ const Loader = ({ setShowLoader }) => {
       clipPath: "polygon(0 0,100% 0,100% 0 ,0 0)",
 
       transition: {
-        delay: 3.8,
+        delay: 2.6,
         duration: 1,
       },
     },
@@ -68,7 +68,7 @@ const Loader = ({ setShowLoader }) => {
     >
         <motion.div variants={imageUp}
           initial="hidden"
-          animate="show" className="w-[100%] h-[60vh]  flex items-center  gap-10 justify-center mt-20 ">
+          animate="show" className="w-[100%] h-[60%]  flex items-center  gap-10 justify-center mt-20 ">
         <img
           src="/assets/main1.webp"
           width={300}
@@ -94,7 +94,7 @@ const Loader = ({ setShowLoader }) => {
           
         />
         <img
-          src="/assets/main4.webp"
+          src="/assets/main6.webp"
           width={300}
           height={300}
           
@@ -137,7 +137,7 @@ const Loader = ({ setShowLoader }) => {
         variants={textStaggered}
         initial="hidden"
         animate="show"
-        className="text-black  text-6xl    transform h-[30vh] items-center justify-center flex  z-50"
+        className="text-black  text-6xl    transform h-[40%] items-center justify-center flex   z-50"
       >
         <motion.span
           

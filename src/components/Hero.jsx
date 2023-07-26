@@ -181,7 +181,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className=" h-[40%] text-white font-['Inter'] w-full text-[50px] md:text-[80px] xl:text-[120px] xl:text-[160px] flex items-center justify-center">
+        <div className="pt-20 h-[40%] text-white font-['Inter'] w-full text-[50px] md:text-[80px] xl:text-[120px] xl:text-[160px] flex items-center justify-center">
           <p className=" font-semibold py-20">
             <span className="text-[#7053ff]">A</span>nime
             <span className="text-[#7053ff]">N</span>exus
