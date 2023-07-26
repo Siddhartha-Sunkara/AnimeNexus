@@ -24,7 +24,7 @@ body {
   /* font-family: 'Press_Start_2P', cursive; */
   color: rgb(var(--background-start-rgb));
   background: 
-    rgb(var(--foreground-rgb));
+    rgb(4, 2, 3);
 }
 .card-image {
   overflow-clip-margin: content-box;
