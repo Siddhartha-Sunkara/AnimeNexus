@@ -50,7 +50,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="slide w-[960px] bg-blue-300">
-              <video src="/assets/onepiece1.mp4" autoPlay loop muted controls />
+              <video src="/assets/op1.mp4" autoPlay loop muted controls />
             </div>
             <div className="slide w-[384px] bg-blue-300 rounded-t-[30%] overflow-hidden ">
               <video src="/assets/jjk.mp4" autoPlay loop muted controls />
@@ -135,7 +135,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="slide w-[960px] bg-blue-300">
-              <video src="/assets/onepiece1.mp4" autoPlay loop muted controls />
+              <video src="/assets/op1.mp4" autoPlay loop muted controls />
             </div>
             <div className="slide w-[384px] bg-blue-300 rounded-t-[30%] overflow-hidden ">
               <video src="/assets/jjk.mp4" autoPlay loop muted controls />
