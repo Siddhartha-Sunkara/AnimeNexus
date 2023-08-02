@@ -15,7 +15,8 @@ const Loader = ({ setShowLoader }) => {
 
       transition: {
         delay: 2.6,
-        duration: 1,
+        duration: 0.5 ,
+        
       },
     },
   };
@@ -27,6 +28,7 @@ const Loader = ({ setShowLoader }) => {
     show: {
       opacity: 1,
       transition: {
+        delayChildren: 0.3,
         staggerChildren: 0.3,
       },
     },
@@ -49,7 +51,7 @@ const Loader = ({ setShowLoader }) => {
     show: {
       clipPath: "polygon(0 0,100% 0,100% 100% ,0 100%)",
       transition: {
-        delay: 0.8,
+        // delay: 0.8,
         duration: 1,
         // ease: "easeIn",
         delayChildren: 0.3,
@@ -64,14 +66,14 @@ const Loader = ({ setShowLoader }) => {
       initial="hidden"
       animate="show"
       onAnimationComplete={() => setShowLoader(false)}
-      className="h-[90vh]  bg-white w-[100%] flex flex-col items-center justify-center "
+      className="h-[90vh] z-[100] bg-white w-[100%] flex flex-col items-center justify-center "
     >
         <motion.div variants={imageUp}
           initial="hidden"
           animate="show" className="w-[100%] h-[60%]  flex items-center  gap-10 justify-center mt-20 ">
         <img
           src="/assets/main1.webp"
-          width={300}
+          width={275}
           height={300}
           
           className="h-full"
@@ -79,7 +81,7 @@ const Loader = ({ setShowLoader }) => {
         />
         <img
           src="/assets/main2.webp"
-          width={300}
+          width={275}
           height={300}
           
           className="hidden md:flex h-full"
@@ -87,7 +89,7 @@ const Loader = ({ setShowLoader }) => {
         />
         <img
           src="/assets/main3.webp"
-          width={300}
+          width={275}
           height={300}
           
           className=" hidden lg:flex h-full"
@@ -95,7 +97,7 @@ const Loader = ({ setShowLoader }) => {
         />
         <img
           src="/assets/main6.webp"
-          width={300}
+          width={275}
           height={300}
           
           className=" hidden xl:flex h-full"

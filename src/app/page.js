@@ -12,10 +12,11 @@ export default async function Main() {
   return (
     <>{
       showLoader ?<Loader setShowLoader={setShowLoader} />
-    :<>
-      <Hero/>
-      <Footer />
-      </>}
+    :
+    <div className='z-[100]'> <Hero/>
+      <Footer /></div>
+     
+      }
     </>
   );
 };
