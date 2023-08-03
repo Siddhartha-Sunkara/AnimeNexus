@@ -49,7 +49,7 @@ export default async function page({ params }) {
           {/* </div> */}
 
           <div className="py-20 flex flex-col bg-[#040203] text-[#faf4fa] gap-5 items-center">
-            <p className="text-[14px] md:text-lg lg:text-2xl text-center xl:text-left  font-['Press_Start_2P'] ">Recommended for you</p>
+            <p className="text-[14px] md:text-lg lg:text-2xl text-center xl:text-left  font-['dark'] ">Recommended for you</p>
             <PageWrapper>
             <div className="w-full flex justify-center">
               <div className="flex flex-col md:flex-row flex-wrap  w-[80vw] gap-10 items-center px-0 sm:px-10 xl:px-20 justify-between">

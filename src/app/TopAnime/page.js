@@ -53,7 +53,7 @@ export default async function TopAnime() {
   return (
     <div className="flex flex-col xl:flex-row w-full items-center justify-center xl:justify-between xl:p-20 bg-[#040203]">
       <div className="topanime w-[90%] xl:w-[30%]   flex flex-col gap-5">
-        <p className=" text-xl xl:text-xl font-['Press_Start_2P']  text-[#faf4fa]  font-bold w-full flex pt-10 xl:p-5 justify-center">
+        <p className=" text-xl font-['dark'] xl:text-4xl  text-[#faf4fa]  font-bold w-full flex pt-10 xl:p-5 justify-center">
           Top Anime 
         </p>
         {Array.isArray(topanime) && topanime.slice(0,20).map((datas) => (

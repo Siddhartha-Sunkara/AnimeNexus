@@ -146,7 +146,7 @@ const Loader = ({ setShowLoader }) => {
           initial="hidden"
           animate="show"
           variants={textStaggeredChildren}
-          className=" font-['Inter'] text-[#040203] w-full text-[50px] md:text-[80px] xl:text-[120px] xl:text-[160px] flex items-center justify-center"
+          className=" font-['cfour'] text-[#040203] w-full text-[50px] md:text-[80px] xl:text-[120px] xl:text-[160px] flex items-center justify-center"
         >
           <p className=" font-semibold">
             <span className="text-[#7053ff]">A</span>nime
@@ -154,6 +154,7 @@ const Loader = ({ setShowLoader }) => {
             <span className="text-[#7053ff]">.</span>
           </p>
         </motion.span>
+        
       </motion.h1>
       
     </motion.div>

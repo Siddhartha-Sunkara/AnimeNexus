@@ -19,7 +19,14 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+@font-face {
+  font-family: 'cfour';
+  src: url(/fonts/Cfour.otf);
+}
+@font-face {
+  font-family: 'dark';
+  src: url(/fonts/DarkerGrotesque-VariableFont_wght.ttf);
+}
 body {
   /* font-family: 'Press_Start_2P', cursive; */
   color: rgb(var(--background-start-rgb));

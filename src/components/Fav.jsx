@@ -5,7 +5,7 @@ const Fav = () => {
   return (
     <div className="h-[100vh] w-[100%] flex flex-col justify-center">
       <div className="text-white flex flex-col xl:flex-row items-center font-['Darker Grotesque']  text-[80px] md:text-[136px]  xl:text-[202px] 2xl:text-[232px] ">
-        <p className=" xl:w-[60%] fav py-10 xl:p-10 text-center xl:text-left">
+        <p className="  xl:w-[60%] fav py-10 xl:p-10 text-center xl:text-left">
           Your <br /> Favourite <br /> Anime
           <span className="text-[#7053ff]">.</span>
         </p>

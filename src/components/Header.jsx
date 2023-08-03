@@ -43,7 +43,7 @@ const Header = () => {
     <header className="h-[10vh] w-full bg-[#040203] text-[#fffffe]">
       <div className="flex h-full px-5 md:px-10 items-center justify-between">
         <Link href="/">
-          <div className="logo font-['Press_Start_2P'] hover:text-[#7053ff] text-xl">
+          <div className="logo font-['cfour'] font-bold hover:text-[#7053ff] text-3xl">
             <span className="text-[#7053ff]">A</span>nime
             <span className="text-[#7053ff]">N</span>exus
           </div>
@@ -52,7 +52,7 @@ const Header = () => {
           <Searchbar />
         </div> */}
         <div className="navs hidden lg:flex">
-          <ul className="flex font-['Press_Start_2P']  text-[14px] lg:text-[12px] items-center gap-20 justify-end">
+          <ul className="flex font-['dark']   font-semibold text-[14px] lg:text-[27px] items-center gap-20 justify-end">
             <li>
               <Link href="/First/1" className="hover:text-[#7053ff]">
                 Home
@@ -108,7 +108,7 @@ const Header = () => {
                 <button onClick={handleClose} className="close"></button>
               </div>
             </div>
-            <ul className="flex flex-col  font-['Press_Start_2P'] px-10 sm:px-20 pb-20 text-[14px] text-black  gap-10 justify-center h-full items-center">
+            <ul className="flex flex-col  font-['dark'] px-10 sm:px-20 pb-20 text-[14px] text-black  gap-10 justify-center h-full items-center">
               <li>
                 <Link
                   onClick={handleClose}
