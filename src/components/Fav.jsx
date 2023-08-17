@@ -12,10 +12,11 @@ const Fav = () => {
         <div className=" xl:w-[40%] flex flex-col justify-center items-center gap-10 ">
           <div className="h-56 w-56 xl:h-80 xl:w-80 2xl:h-96 2xl:w-96 rounded-[70px] bg-white overflow-hidden ">
             <Image
-              src="/assets/all2.jpeg"
-              width={384}
-              height={300}
-              className=" mt-[-100px]"
+              src="/assets/all.webp"
+              width={1080}
+              height={1080}
+              className=" object-cover mt-[-100px]"
+              alt="fav"
             />
           </div>
           <Link href="/TopAnime" className="flex items-center">
