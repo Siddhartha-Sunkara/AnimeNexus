@@ -11,32 +11,38 @@ const Hero = () => {
       <div className="h-[90vh] w-[100%]">
         <div className="h-[60%] flex gap-5 overflow-hidden">
           <div className=" h-full slide-track w-[200%]  bg-[#040203] flex gap-10  ">
-            <div className="slide w-[384px] bg-blue-300 rounded-t-full overflow-hidden ">
-              <video src="/assets/aot.mp4" autoPlay loop muted  />
+            <div className="slide w-[384px] rounded-t-full overflow-hidden ">
+            <Image
+                  
+                  src="https://i.pinimg.com/564x/f2/2d/5b/f22d5bcadf0a8d12da2db59ac0b70a5b.jpg"
+                  alt="naruto"
+                  width={1080}
+                  height={1080}
+                  
+                  className="w-full object-cover"
+                />
             </div>
             <div className="slide w-[576px] flex flex-col  gap-5   bg-[#040203]">
               <div className="upper flex h-[50%]  gap-10   ">
-                <div className="left w-[50%] bg-red-400 overflow-hidden">
+                <div className="left w-[50%] overflow-hidden">
                   <Image
                   
                     src="https://i.pinimg.com/564x/2d/c0/79/2dc079c2a051eb5e022efbf43fe46178.jpg"
                     alt="naruto"
                     width={1080}
                     height={1080}
-                    placeholder="blur"
-                    blurDataURL="/assets/Eye.webp"
+                    
                     className="w-full object-cover"
                   />
                 </div>
-                <div className="right w-[50%] bg-red-400 overflow-hidden rounded-full ">
+                <div className="right w-[50%]  overflow-hidden rounded-full ">
                   <Image
                   
                     src="https://i.pinimg.com/564x/36/75/32/3675321bbbb6049461d67291fc44e1ad.jpg"
                     alt="naruto"
                     width={1080}
                     height={1080}
-                    placeholder="blur"
-                    blurDataURL="/assets/Eye.webp"
+                    
                     className="w-full mt-[-100px] object-cover"
                   />
                 </div>
@@ -52,14 +58,21 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div className="slide w-[960px] bg-blue-300">
+            <div className="slide w-[960px] ">
               <video src="/assets/op1.mp4" autoPlay loop muted  />
             </div>
-            <div className="slide w-[384px] bg-blue-300 rounded-t-[30%] overflow-hidden ">
-              <video src="/assets/jjk.mp4" autoPlay loop muted  />
+            <div className="slide w-[384px]  rounded-t-[30%] overflow-hidden ">
+            <Image
+                
+                src="https://i.pinimg.com/564x/cf/f6/6b/cff66bcd5361c982066aa65d6d345526.jpg"
+                alt="naruto"
+                width={1080}
+                height={1080}
+                className="object-cover "
+              />
             </div>
             <div className=" slide w-[576px] flex flex-col  gap-5    bg-[#040203]">
-              <div className="upper h-[50%] bg-red-600 rounded-full overflow-hidden">
+              <div className="upper h-[50%]  rounded-full overflow-hidden">
                 <Image
                 
                   src="https://c4.wallpaperflare.com/wallpaper/693/688/935/uchiha-madara-naruto-shippuuden-wallpaper-preview.jpg"
@@ -70,7 +83,7 @@ const Hero = () => {
                 />
               </div>
               <div className="lower flex h-[50%]  gap-10   ">
-                <div className="left w-[50%] bg-red-400 overflow-hidden">
+                <div className="left w-[50%] overflow-hidden">
                   {" "}
                   
                   <Image
@@ -79,57 +92,61 @@ const Hero = () => {
                     alt="naruto"
                     width={1080}
                     height={1080}
-                    placeholder="blur"
-                    blurDataURL="/assets/Eye.webp"
+                    
                     className="w-full  mt-[-100px] object-cover"
                   />
                   
                 </div>
-                <div className="right w-[50%] bg-red-400 rounded-s-full overflow-hidden rounded-tr-full">
+                <div className="right w-[50%] rounded-s-full overflow-hidden rounded-tr-full">
                   <Image
                   
                     src="https://i.pinimg.com/564x/34/6b/5e/346b5e710603122fdc5e38fffef75088.jpg"
                     alt="naruto"
                     width={1080}
                     height={1080}
-                    placeholder="blur"
-                    blurDataURL="/assets/Eye.webp"
+                    
                     className="object-cover"
                   />
                 </div>
               </div>
             </div>
-            <div className="slide w-[960px] bg-blue-300">
+            <div className="slide w-[960px] ">
               <video src="/assets/demon1.mp4" autoPlay loop muted  />
             </div>
           </div>
           <div className=" h-full slide-track w-[200%]  bg-[#040203] flex gap-10  ">
-            <div className="slide w-[384px] bg-blue-300 rounded-t-full overflow-hidden ">
-              <video src="/assets/aot.mp4" autoPlay loop muted  />
+            <div className="slide w-[384px]  rounded-t-full overflow-hidden ">
+            <Image
+                  
+                  src="https://i.pinimg.com/564x/f2/2d/5b/f22d5bcadf0a8d12da2db59ac0b70a5b.jpg"
+                  alt="naruto"
+                  width={1080}
+                  height={1080}
+                  
+                  className="w-full object-cover"
+                />
             </div>
             <div className="slide w-[576px] flex flex-col  gap-5   bg-[#040203]">
               <div className="upper flex h-[50%]  gap-10   ">
-                <div className="left w-[50%] bg-red-400 overflow-hidden">
+                <div className="left w-[50%] overflow-hidden">
                   <Image
                   
                     src="https://i.pinimg.com/564x/2d/c0/79/2dc079c2a051eb5e022efbf43fe46178.jpg"
                     alt="naruto"
                     width={1080}
                     height={1080}
-                    placeholder="blur"
-                    blurDataURL="/assets/Eye.webp"
+                    
                     className="w-full object-cover"
                   />
                 </div>
-                <div className="right w-[50%] bg-red-400 overflow-hidden rounded-full ">
+                <div className="right w-[50%] overflow-hidden rounded-full ">
                   <Image
                   
                     src="https://i.pinimg.com/564x/36/75/32/3675321bbbb6049461d67291fc44e1ad.jpg"
                     alt="naruto"
                     width={1080}
                     height={1080}
-                    placeholder="blur"
-                    blurDataURL="/assets/Eye.webp"
+                    
                     className="w-full mt-[-100px] object-cover"
                   />
                 </div>
@@ -145,14 +162,21 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div className="slide w-[960px] bg-blue-300">
+            <div className="slide w-[960px] ">
               <video src="/assets/op1.mp4" autoPlay loop muted  />
             </div>
-            <div className="slide w-[384px] bg-blue-300 rounded-t-[30%] overflow-hidden ">
-              <video src="/assets/jjk.mp4" autoPlay loop muted  />
+            <div className="slide w-[384px]  rounded-t-[30%] overflow-hidden ">
+            <Image
+                
+                src="https://i.pinimg.com/564x/cf/f6/6b/cff66bcd5361c982066aa65d6d345526.jpg"
+                alt="naruto"
+                width={1080}
+                height={1080}
+                className="object-cover "
+              />
             </div>
             <div className=" slide w-[576px] flex flex-col  gap-5    bg-[#040203]">
-              <div className="upper h-[50%] bg-red-600 rounded-full overflow-hidden">
+              <div className="upper h-[50%] rounded-full overflow-hidden">
                 <Image
                 
                   src="https://c4.wallpaperflare.com/wallpaper/693/688/935/uchiha-madara-naruto-shippuuden-wallpaper-preview.jpg"
@@ -163,7 +187,7 @@ const Hero = () => {
                 />
               </div>
               <div className="lower flex h-[50%]  gap-10   ">
-                <div className="left w-[50%] bg-red-400 overflow-hidden">
+                <div className="left w-[50%]  overflow-hidden">
                   {" "}
                   
                   <Image
@@ -172,26 +196,24 @@ const Hero = () => {
                     alt="naruto"
                     width={1080}
                     height={1080}
-                    placeholder="blur"
-                    blurDataURL="/assets/Eye.webp"
+                    
                     className="w-full  mt-[-100px] object-cover"
                   />
                   
                 </div>
-                <div className="right w-[50%] bg-red-400 rounded-s-full overflow-hidden rounded-tr-full">
+                <div className="right w-[50%]  rounded-s-full overflow-hidden rounded-tr-full">
                   <Image
                   
                     src="https://i.pinimg.com/564x/34/6b/5e/346b5e710603122fdc5e38fffef75088.jpg"
                     alt="naruto"
                     width={1080}
                     height={1080}
-                    placeholder="blur"
-                    blurDataURL="/assets/Eye.webp"
+                    
                   />
                 </div>
               </div>
             </div>
-            <div className="slide w-[960px] bg-blue-300">
+            <div className="slide w-[960px] ">
               <video src="/assets/demon1.mp4" autoPlay loop muted  />
             </div>
           </div>
