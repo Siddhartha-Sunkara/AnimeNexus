@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 
 import Hero from '../components/Hero'
 
-export default async function Main() {
+export default  function Main() {
  const [showLoader, setShowLoader] = useState(true);
   return (
     <>{

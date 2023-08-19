@@ -201,12 +201,12 @@ body {
   animation-play-state: paused;
 }
 .slide-track{
-  animation: scroll 80s linear infinite;
+  animation: scroll 40s linear infinite;
 width: 3840px;
 }
 @media only screen and (max-width: 768px){
   .slide-track {
-    animation: scroll 80s linear infinite;
+    animation: scroll 40s linear infinite;
 width: 3840px;
   }
 }
@@ -214,4 +214,9 @@ width: 3840px;
 .fav{
   letter-spacing: -8px;
   line-height: 0.9;
+}
+
+iframe{
+  width: 960px;
+  height: 60vh;
 }
