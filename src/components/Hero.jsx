@@ -61,7 +61,7 @@ const Hero = () => {
             </div>
             <div className="slide w-[960px] ">
               {/* <video src="/assets/op1.mp4" autoPlay loop muted  /> */}
-              <iframe src="https://player.vimeo.com/video/855954930?&api=1&background=1&autoplay=1&loop=1&autopause=0&mute=1&playsinline=1&loop=1&title=0&byline=0&portrait=0&showinfo=0&controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"  title="op1"></iframe>
+              {/* <iframe src="https://player.vimeo.com/video/855954930?&api=1&background=1&autoplay=1&loop=1&autopause=0&mute=1&playsinline=1&loop=1&title=0&byline=0&portrait=0&showinfo=0&controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"  title="op1"></iframe> */}
             </div>
             <div className="slide w-[384px]  rounded-t-[30%] overflow-hidden ">
             <Image
@@ -115,7 +115,7 @@ const Hero = () => {
             <div className="slide w-[960px] h-full ">
               {/* <video src="/assets/demon1.mp4" autoPlay loop muted  /> */}
               
-               <iframe src="https://player.vimeo.com/video/855952916?&api=1&background=1&autoplay=1&loop=1&autopause=0&mute=1&playsinline=1&loop=1&title=0&byline=0&portrait=0&showinfo=0&controls=0" frameborder="0"  title="demon1"></iframe>
+               {/* <iframe src="https://player.vimeo.com/video/855952916?&api=1&background=1&autoplay=1&loop=1&autopause=0&mute=1&playsinline=1&loop=1&title=0&byline=0&portrait=0&showinfo=0&controls=0" frameborder="0"   title="demon1"></iframe> */}
             </div>
           </div>
           <div className=" h-full slide-track w-[200%]  bg-[#040203] flex gap-10  ">
@@ -168,7 +168,7 @@ const Hero = () => {
             </div>
             <div className="slide w-[960px] ">
               {/* <video src="/assets/op1.mp4" autoPlay loop muted  /> */}
-              <iframe src="https://player.vimeo.com/video/855954930?&api=1&background=1&autoplay=1&loop=1&autopause=0&mute=1&playsinline=1&loop=1&title=0&byline=0&portrait=0&showinfo=0&controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"  title="op1"></iframe>
+              {/* <iframe src="https://player.vimeo.com/video/855954930?&api=1&background=1&autoplay=1&loop=1&autopause=0&mute=1&playsinline=1&loop=1&title=0&byline=0&portrait=0&showinfo=0&controls=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"  title="op1"></iframe> */}
 
             </div>
             <div className="slide w-[384px]  rounded-t-[30%] overflow-hidden ">
@@ -221,7 +221,7 @@ const Hero = () => {
             </div>
             <div className="slide w-[960px] ">
               {/* <video src="/assets/demon1.mp4" autoPlay loop muted  /> */}
-              <iframe src="https://player.vimeo.com/video/855952916?&api=1&background=1&autoplay=1&loop=1&autopause=0&mute=1&playsinline=1&loop=1&title=0&byline=0&portrait=0&showinfo=0&controls=0" frameborder="0"  title="demon1"></iframe>
+              {/* <iframe src="https://player.vimeo.com/video/855952916?&api=1&background=1&autoplay=1&loop=1&autopause=0&mute=1&playsinline=1&loop=1&title=0&byline=0&portrait=0&showinfo=0&controls=0" frameborder="0"  title="demon1"></iframe> */}
             </div>
           </div>
         </div>
