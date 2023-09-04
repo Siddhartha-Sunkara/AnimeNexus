@@ -8,24 +8,24 @@ const Pagination = ({ currentPage, prevHref, nextHref }) => {
   // console.log("Pagination", nextHref);
   return (
     <div>
-      <div className="join">
+      <div className="join flex gap-2">
         <Link href={prevHref}>
           <button
             className={`${
               Number(currentPage) === 1 ? "disabled" : ""
-            } join-item btn`}
+            } join-item btn text-2xl`}
           >
-            »
+            -
           </button>
         </Link>
-        <button className="join-item btn">Page {currentPage}</button>
+        <button className="join-item btn text-2xl">Page {currentPage}</button>
         <Link href={nextHref}>
           <button
             className={`${
               Number(currentPage) === 2489 ? "disabled" : ""
-            }join-item btn`}
+            }join-item btn text-2xl`}
           >
-            »
+          +
           </button>
         </Link>
       </div>

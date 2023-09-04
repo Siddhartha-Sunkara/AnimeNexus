@@ -6,7 +6,7 @@ const AnimeCard = (datas) => {
   const { _id, title, synopsis, image, type, episodes, ranking } = datas;
 
   return (
-    <div className="w-56 flex  justify-center  my-10 h-96 bg-blue-500">
+    <div className="w-56 flex  justify-center  my-10 h-96 bg-black">
       <div>
         <div className="overflow-hidden h-96">
           <Link href={`/Details/${_id}`}>
