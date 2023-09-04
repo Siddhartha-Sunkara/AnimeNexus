@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   const handleClick=()=>{
@@ -13,9 +14,10 @@ const Footer = () => {
             <li>scode4510@gmail.com</li>
           </ul>
           <ul className="flex flex-col gap-5">
-            <li>Home</li>
-            <li>Top Anime</li>
-            <li>Suggestions</li>
+            <Link href='/First/1'><li>Home</li></Link>
+            <Link href='/TopAnime'><li>Top Anime</li></Link>
+            <Link href='/Suggestions'><li>Suggestions</li></Link>
+
           </ul>
         </div>
 
