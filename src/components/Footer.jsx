@@ -13,7 +13,7 @@ const Footer = () => {
             <li className="text-[#cbc9e2] uppercase">Say Hello</li>
             <li>scode4510@gmail.com</li>
           </ul>
-          <ul className="flex flex-col gap-5">
+          <ul className="flex flex-col gap-5 text-[28px]">
             <Link href='/First/1'><li>Home</li></Link>
             <Link href='/TopAnime'><li>Top Anime</li></Link>
             <Link href='/Suggestions'><li>Suggestions</li></Link>
@@ -23,7 +23,7 @@ const Footer = () => {
 
         <hr className="bg-[#cdfc6e] my-10" />
         <div className="flex flex-col xl:flex-row  gap-2 md:gap-10 text-[18px] xl:text-[20px] justify-between">
-          <p><span className="font-bold font-['cfour']">AnimeNexus</span> developed by Siddhartha Sunkara</p>
+          <p><span className="font-bold font-['cfour']">AnimeNexus</span> developed by <span className="font-bold text-[28px]"><Link href="https://digital-portfolio-next-js.vercel.app/" target="_blank">Siddhartha Sunkara</Link> </span></p>
           
         </div>
         
