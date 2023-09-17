@@ -3,18 +3,25 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { getAuth } from "firebase/auth";
-
+import firebase from 'firebase/app';
+import { getFirestore } from "firebase/firestore";
+import 'firebase/auth';
+import 'firebase/firestore';
+// import { firestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBauGIIFRL8Z4v7sQUxOomwV7MZE97QfVQ",
-  authDomain: "animenexus-944a6.firebaseapp.com",
-  projectId: "animenexus-944a6",
-  storageBucket: "animenexus-944a6.appspot.com",
-  messagingSenderId: "939940027486",
-  appId: "1:939940027486:web:78cf6c68acbf8e234b28cf"
+  apiKey: "AIzaSyBXfqZj_E5vCqsOQa9I__W-sOLKehxdbcI",
+  authDomain: "animenexus-da403.firebaseapp.com",
+  projectId: "animenexus-da403",
+  storageBucket: "animenexus-da403.appspot.com",
+  messagingSenderId: "660708796891",
+  appId: "1:660708796891:web:ddcf16d0befbde48199ffe"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
+const db  = getFirestore(app); 
+const config = { app, db };
+export default config;

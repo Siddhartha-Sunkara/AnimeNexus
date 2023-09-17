@@ -163,7 +163,7 @@ const page = () => {
         </div>
         
       </div>
-      <div className="text-white font-['Inter'] w-full text-[50px] md:text-[80px] xl:text-[120px] xl:text-[160px] flex item-center justify-center">
+      <div className="text-white font-['Inter'] w-full text-[50px] md:text-[80px] lg:text-[120px] xl:text-[160px] flex item-center justify-center">
     <p className=" p-20"><span className="text-[#7053ff]">A</span>nime<span className="text-[#7053ff]">N</span>exus
     <span className="text-[#7053ff]">.</span></p>
     

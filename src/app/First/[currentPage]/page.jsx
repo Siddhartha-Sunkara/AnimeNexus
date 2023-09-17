@@ -38,7 +38,7 @@ export default async function page({ params }) {
 
   const data = await getData(currentPage);
   const firstPage = await getData(1);
-  // console.log(firstPage)
+  console.log(data, Array.isArray(data))
   return (
     <>
       

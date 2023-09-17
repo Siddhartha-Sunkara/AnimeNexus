@@ -64,6 +64,11 @@ const Header = () => {
               </Link>
             </li>
             <li>
+              <Link href="/Wishlist" className="hover:text-[#7053ff]">
+                Wishlist
+              </Link>
+            </li>
+            <li>
               <Link href="/Suggestions" className="hover:text-[#7053ff]">
                 Get Suggestions
               </Link>
