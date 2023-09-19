@@ -9,7 +9,7 @@ const AddToWishlistButton = ({ animeId , animeTitle, imageURL}) => {
   };
 
   return (
-    <button onClick={handleAddToWishlist}>Add to Wishlist</button>
+    <button onClick={handleAddToWishlist} className='w-full h-full items-center justify-center'>Add to Wishlist</button>
   );
 };
 

@@ -20,7 +20,7 @@ const Page = async ({ params }) => {
     return (
       <div className="">
          <PageWrapper>
-        <div className=" h-[60vh] hero flex h-full bg-red-400">
+        <div className="h-full xl:h-[60vh] hero flex  bg-red-400">
           <div className="left w-full 2xl:w-[60%] flex flex-col items-center md:items-start md:flex-row h-full  bg-[#0c0a0b] text-[#faf4fa] ">
             <div className="img w-[200px] h-[300px] m-10">
               <Image
