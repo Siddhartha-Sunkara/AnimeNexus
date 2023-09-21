@@ -9,9 +9,9 @@ import Link from 'next/link';
     //   console.log(data)
     return(
         <div className="flex flex-col gap-2 p-5">
-      <div className="text-white flex  font-['dark'] text-3xl items-end justify-between">
+      <div className="text-white flex  font-['dark'] text-2xl md:text-3xl xl:text-4xl items-end justify-between">
         <p>Upcoming Anime</p>
-        <Link href="#" className="text-xl">View All</Link>
+        <Link href="#" className="text-xl xl:text-2xl">View All</Link>
       </div>
       <div className="text-white w-full  flex gap-8 items-center overflow-x-scroll ">
         {Array.isArray(data) &&

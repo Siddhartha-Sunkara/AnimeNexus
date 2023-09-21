@@ -13,7 +13,7 @@ const Page = async ({ params }) => {
   return (
     <>
     <div className="">
-        <div className="banner h-[40vh] w-full relative bg-white">
+        <div className="banner hidden  md:flex h-[40vh] w-full relative bg-white">
           <Image src={data[0].bannerImage} alt={data[0].id} fill className="object-cover"/>
         </div>
 
@@ -29,7 +29,7 @@ const Page = async ({ params }) => {
               height={300}
             />
           </div>
-          <div className="content flex flex-col items-center md:items-start md:justify-start justify-center gap-10 p-5 md:p-10 w-[70%]">
+          <div className="content flex flex-col items-center md:items-start md:justify-start justify-center gap-10 p-1 md:p-10 w-[90%] md:w-[70%]">
             <div className="div w-full text-[10px] md:text-base flex  items-center md:items-start  justify-center md:justify-start gap-10  ">
               <Link href="/">Home</Link>
               <p>{data[0].type}</p>
@@ -70,8 +70,8 @@ const Page = async ({ params }) => {
               </div>
             </div>
             <div className="synopsis">
-              <p className="text-justify flex flex-col gap-1 text-[12px] md:text-[14px] py-10 md:py-0">
-                <span className="font-semibold text-[14px]  md:text-base">
+              <p className="text-justify flex flex-col gap-1 text-[14px] md:text-[14px] py-10 md:py-0">
+                <span className="font-semibold text-[18px]  md:text-base">
                   Synopsis:
                 </span>
                 <p>

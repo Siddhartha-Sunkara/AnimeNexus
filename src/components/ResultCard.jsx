@@ -10,17 +10,17 @@ import RemoveAnime from "./RemoveButton";
 import { UserAuth } from "../app/context/AuthContext";
 
 const AnimeCard = (datas) => {
-  const { animeId, animeTitle, imageURL } = datas;
+  
   // const user = auth.currentUser;
-  const router = useRouter()
-  const { user, isLoading, googleSignIn, logOut } = UserAuth();
+
+
   return (
     <div className="w-56 flex  justify-center  my-10 h-96 bg-[#040203]">
       <div>
         <div className="overflow-hidden h-96">
-          <Link href={`/AnimeDetails/${animeId}`}>
+          <Link href={`/AnimeDetails/${datas?.id}`}>
             <Image
-              src={datas.imageURL}
+              src={datas?.coverImage?.extraLarge}
               alt=""
               width={200}
               height={300}
@@ -29,29 +29,24 @@ const AnimeCard = (datas) => {
           </Link>
         </div>
 
-        <Link href={`/AnimeDetails/${animeId}`}>
+        <Link href={`/AnimeDetails/${datas?.id}`}>
           <p className="text-[16px] font-semibold py-1 hover:underline">
-            {datas.animeTitle?.substring(0, 25)}
+            {datas?.title?.english || datas?.title?.romaji || datas?.title?.native ?.substring(0, 25)}
           </p>
         </Link>
 
         <div className="flex  justify-between gap-5">
-          <p className="text-[14px] font-semibold uppercase">{datas.type}</p>
+          <p className="text-[14px] font-semibold uppercase">{datas?.type}</p>
           <p className="text-[14px] font-semibold uppercase">
-            {datas.episodes} Epi
+            {datas?.episodes || "??"} Epi
           </p>
-          <Link href={`/AnimeDetails/${animeId}`}>
+          <Link href={`/AnimeDetails/${datas?.type}`}>
             <p className="text-[14px] font-semibold uppercase hover:text-[#7053ff]">
               View More
             </p>
           </Link>
         </div>
-        <AddButton animeId={datas.animeId} animeTitle={datas.animeTitle} imageURL={datas.imageURL}/>
-        {!isLoading && (
-          <RemoveAnime animeId={datas.animeId} />)}
-        {/* if(user){
-          <RemoveAnime animeId={datas.animeId} uid={user.uid}/>
-        } */}
+        
       </div>
     </div>
   );

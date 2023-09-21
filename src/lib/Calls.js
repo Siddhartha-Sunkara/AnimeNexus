@@ -10,6 +10,7 @@ export async function getTop10() {
             romaji
             native
           }
+          status
           type
           episodes
           duration
@@ -22,6 +23,16 @@ export async function getTop10() {
                 id
               }
             }
+          }
+          startDate {
+            year
+            month
+            day
+          }
+          endDate {
+            year
+            month
+            day
           }
           bannerImage
           popularity
@@ -75,6 +86,7 @@ export async function getFavourites() {
               romaji
               native
             }
+            status
             type
             episodes
             duration
@@ -87,6 +99,16 @@ export async function getFavourites() {
                   id
                 }
               }
+            }
+            startDate {
+              year
+              month
+              day
+            }
+            endDate {
+              year
+              month
+              day
             }
             popularity
             bannerImage
@@ -139,6 +161,7 @@ export async function getPopular() {
               romaji
               native
             }
+            status
             type
             episodes
             duration
@@ -151,6 +174,16 @@ export async function getPopular() {
                   id
                 }
               }
+            }
+            startDate {
+              year
+              month
+              day
+            }
+            endDate {
+              year
+              month
+              day
             }
             popularity
             bannerImage
@@ -204,6 +237,7 @@ export async function getTrending() {
               romaji
               native
             }
+           
             type
             episodes
             duration
@@ -216,6 +250,16 @@ export async function getTrending() {
                   id
                 }
               }
+            }
+            startDate {
+              year
+              month
+              day
+            }
+            endDate {
+              year
+              month
+              day
             }
             popularity
             bannerImage
@@ -271,6 +315,16 @@ export async function getUpcoming() {
               romaji
               native
             }
+            startDate {
+              year
+              month
+              day
+            }
+            endDate {
+              year
+              month
+              day
+            }
             type
             episodes
             duration
@@ -322,7 +376,7 @@ export async function getUpcoming() {
 
   const data = result.data.Page.media;
   return data;
-} 
+}
 export async function getAnimebyId(id) {
   const query = `
     query ($id: Int) {
@@ -335,6 +389,7 @@ export async function getAnimebyId(id) {
           native
         }
         type
+        status
         episodes
         duration
         averageScore
@@ -401,4 +456,89 @@ export async function getAnimebyId(id) {
 
   const data = result.data.Media;
   return [data];
+}
+
+export async function searchAnime(searchText) {
+  const query = `
+    query ($searchText: String){
+      Page(page: 1, perPage: 20) {
+        media(search: $searchText, type:ANIME){
+          id
+          title {
+            english
+            romaji
+            native
+          }
+          type
+          episodes
+          duration
+          averageScore
+          genres
+          description
+          recommendations {
+            edges {
+              node {
+                id
+              }
+            }
+          }
+          popularity
+          startDate {
+            year
+            month
+            day
+          }
+          endDate {
+            year
+            month
+            day
+          }
+          duration
+          status
+          studios {
+            edges {
+              id
+            }
+          }
+          bannerImage
+          coverImage {
+            extraLarge
+            large
+            medium
+            color
+          }
+        }
+      }
+    }
+  `;
+
+  const variables = {
+    searchText: searchText,
+  };
+
+  const url = "https://graphql.anilist.co";
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+      variables: variables,
+    }),
+  };
+
+  const response = await fetch(url, options);
+  const result = await response.json();
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = result.data.Page.media; // Check if data and media properties exist
+
+  // console.log(data);
+
+  return data || []; // Return an empty array if data is undefined
 }
