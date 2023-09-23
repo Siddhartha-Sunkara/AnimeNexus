@@ -225,6 +225,82 @@ export async function getPopular() {
   return data;
 }
 
+export async function getAllPopular() {
+  const query = `
+    {
+        Page(page:1 perPage:100)
+        {
+          media(sort:POPULARITY_DESC , type:ANIME) {
+            id
+            title{
+              english
+              romaji
+              native
+            }
+            status
+            type
+            episodes
+            duration
+            averageScore
+            genres
+            description
+            recommendations {
+              edges {
+                node {
+                  id
+                }
+              }
+            }
+            startDate {
+              year
+              month
+              day
+            }
+            endDate {
+              year
+              month
+              day
+            }
+            popularity
+            bannerImage
+            coverImage {
+              extraLarge
+              large
+              medium
+              color
+            }
+          }
+        }
+      }
+    `;
+
+  const variables = {
+    id: 15125,
+  };
+
+  const url = "https://graphql.anilist.co";
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+      variables: variables,
+    }),
+  };
+
+  const response = await fetch(url, options);
+  const result = await response.json();
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = result.data.Page.media;
+  return data;
+}
+
 export async function getTrending() {
   const query = `
     {
@@ -306,6 +382,82 @@ export async function getUpcoming() {
   const query = `
     {
         Page(page:1 perPage:10 )
+        {
+          media(status:NOT_YET_RELEASED, type:ANIME, sort:POPULARITY_DESC) {
+
+            id
+            title{
+              english
+              romaji
+              native
+            }
+            startDate {
+              year
+              month
+              day
+            }
+            endDate {
+              year
+              month
+              day
+            }
+            type
+            episodes
+            duration
+            averageScore
+            genres
+            description
+            recommendations {
+              edges {
+                node {
+                  id
+                }
+              }
+            }
+            popularity
+            bannerImage
+            coverImage {
+              extraLarge
+              large
+              medium
+              color
+            }
+          }
+        }
+      }
+    `;
+
+  const variables = {
+    id: 15125,
+  };
+
+  const url = "https://graphql.anilist.co";
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+      variables: variables,
+    }),
+  };
+
+  const response = await fetch(url, options);
+  const result = await response.json();
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = result.data.Page.media;
+  return data;
+}
+
+export async function getAllUpcoming() {
+  const query = `
+    {
+        Page(page:1 perPage:100 )
         {
           media(status:NOT_YET_RELEASED, type:ANIME, sort:POPULARITY_DESC) {
 
@@ -461,8 +613,8 @@ export async function getAnimebyId(id) {
 export async function searchAnime(searchText) {
   const query = `
     query ($searchText: String){
-      Page(page: 1, perPage: 20) {
-        media(search: $searchText, type:ANIME){
+      Page(page: 1, perPage: 100) {
+        media(search: $searchText, type:ANIME,  sort:SCORE_DESC, isAdult:false){
           id
           title {
             english
@@ -541,4 +693,234 @@ export async function searchAnime(searchText) {
   // console.log(data);
 
   return data || []; // Return an empty array if data is undefined
+}
+
+
+export async function getTop100() {
+  const query = `
+    {
+      Page(page:1 perPage:100)
+      {
+        media(sort:SCORE_DESC , type:ANIME) {
+          id
+          title{
+            english
+            romaji
+            native
+          }
+          status
+          type
+          episodes
+          duration
+          averageScore
+          genres
+          description
+          recommendations {
+            edges {
+              node {
+                id
+              }
+            }
+          }
+          startDate {
+            year
+            month
+            day
+          }
+          endDate {
+            year
+            month
+            day
+          }
+          bannerImage
+          popularity
+          coverImage {
+            extraLarge
+            large
+            medium
+            color
+          }
+        }
+      }
+    }
+    `;
+
+  const variables = {
+    id: 15125,
+  };
+
+  const url = "https://graphql.anilist.co";
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+      variables: variables,
+    }),
+  };
+
+  const response = await fetch(url, options);
+  const result = await response.json();
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = result.data.Page.media;
+  return data;
+}
+
+
+export async function getAllTopTrending() {
+  const query = `
+    {
+        Page(page:1 perPage:100)
+        {
+          media(sort:TRENDING_DESC , type:ANIME) {
+            id
+            title{
+              english
+              romaji
+              native
+            }
+           
+            type
+            episodes
+            duration
+            averageScore
+            genres
+            description
+            recommendations {
+              edges {
+                node {
+                  id
+                }
+              }
+            }
+            startDate {
+              year
+              month
+              day
+            }
+            endDate {
+              year
+              month
+              day
+            }
+            popularity
+            bannerImage
+            coverImage {
+              extraLarge
+              large
+              medium
+              color
+            }
+          }
+        }
+      }
+    `;
+
+  const variables = {
+    id: 15125,
+  };
+
+  const url = "https://graphql.anilist.co";
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+      variables: variables,
+    }),
+  };
+
+  const response = await fetch(url, options);
+  const result = await response.json();
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = result.data.Page.media;
+  return data;
+}
+
+export async function getAllFanFavourites() {
+  const query = `
+    {
+        Page(page:1 perPage:100)
+        {
+          media(sort:FAVOURITES_DESC , type:ANIME) {
+            id
+            title{
+              english
+              romaji
+              native
+            }
+            status
+            type
+            episodes
+            duration
+            averageScore
+            genres
+            description
+            recommendations {
+              edges {
+                node {
+                  id
+                }
+              }
+            }
+            startDate {
+              year
+              month
+              day
+            }
+            endDate {
+              year
+              month
+              day
+            }
+            popularity
+            bannerImage
+            coverImage {
+              extraLarge
+              large
+              medium
+              color
+            }
+          }
+        }
+      }
+    `;
+
+  const variables = {
+    id: 15125,
+  };
+
+  const url = "https://graphql.anilist.co";
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+      variables: variables,
+    }),
+  };
+
+  const response = await fetch(url, options);
+  const result = await response.json();
+  if (!response.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  const data = result.data.Page.media;
+  return data;
 }

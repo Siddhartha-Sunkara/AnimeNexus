@@ -1,4 +1,3 @@
-// components/AddToWishlistButton.js
 "use client"
 import { addAnimeToWishlist, removeAnime } from '../app/context/AuthContext'; // Import your function for adding anime to the wishlist
 import { useRouter } from 'next/navigation'
@@ -13,7 +12,7 @@ const RemoveAnime = ({ animeId}) => {
   };
 
   return (
-    <button onClick={handleRemoveFromWishlist}>Remove from Wishlist</button>
+    <button onClick={handleRemoveFromWishlist} className='bg-[#7053ff] text-sm md:text-base lg:text-lg xl:text-[22px] font-bold h-8 md:h-12 w-full rounded-lg my-5 text-black'>Remove from Wishlist</button>
   );
 };
 

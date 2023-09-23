@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import AddToWishlistButton from "./AddButton";
 const AnimeCardSlider = ({ anime }) => {
   // console.log(anime.id)
   return (
     <>
-      <Link href={`/AnimeDetails/${anime.id}`}>
+    <div>
         <div className=" rounded-lg overflow-hidden h-48 w-36 md:h-64 md:w-48 xl:h-96 xl:w-64 relative  ">
+      <Link href={`/AnimeDetails/${anime.id}`}>
           <Image
             src={anime.coverImage.extraLarge}
             alt={anime.id}
@@ -14,7 +16,7 @@ const AnimeCardSlider = ({ anime }) => {
             height={1080}
             className=" detimage hover:scale-125 rounded-lg object-cover h-48 w-36 md:h-64 md:w-48 xl:h-96 xl:w-64"
           />
-          <div className="det1 hidden lg:flex lg:flex-col  gap-2 2xl:gap-5  h-48 w-36 md:h-64 md:w-48 xl:h-96 xl:w-64 justify-between absolute items-start lg:justify-start p-1 md:p-3 2xl:p-5 opacity-0   ">
+          <div className="det1 hidden lg:flex lg:flex-col  gap-2 2xl:gap-5  h-48 w-36 md:h-64 md:w-48 xl:h-96 xl:w-64 justify-between absolute items-start lg:justify-start p-1 md:p-3 2xl:p-5 opacity-0 text-white  ">
           <p className="font-bold text-md md:text-lg xl:text-[28px]">
               {anime.title.english || anime.title.native || anime.title.romaji}
             </p>
@@ -47,8 +49,14 @@ const AnimeCardSlider = ({ anime }) => {
               ))}
             </div>
           </div>
+       
+        </Link>
         </div>
-      </Link>
+      <AddToWishlistButton animeId={anime.id} animeTitle={anime.title.english || anime.title.native || anime.title.romaji} imageURL={anime.coverImage.extraLarge }/>  
+      
+
+      </div>
+      
       {/* <p className='text-[10px]'>{anime.title.english || anime.title.romaji || anime.title.native}</p> */}
     </>
   );

@@ -15,43 +15,24 @@ const AnimeCard = (datas) => {
   const router = useRouter()
   const { user, isLoading, googleSignIn, logOut } = UserAuth();
   return (
-    <div className="w-56 flex  justify-center  my-10 h-96 bg-[#040203]">
-      <div>
-        <div className="overflow-hidden h-96">
-          <Link href={`/AnimeDetails/${animeId}`}>
-            <Image
-              src={datas.imageURL}
-              alt=""
-              width={200}
-              height={300}
-              className="card-image  w-full h-full hover:scale-110 overflow-clip"
-            ></Image>
-          </Link>
+    <div className="h-48 w-36 md:h-64 md:w-48 xl:h-96 xl:w-64 flex  justify-center  my-10  bg-[#040203]">
+      <div className="flex flex-col h-fit">
+      <Link href={`/AnimeDetails/${animeId}`}>
+        <div className=" rounded-lg overflow-hidden h-48 w-36 md:h-64 md:w-48 xl:h-96 xl:w-64 relative  ">
+          <Image
+            src={imageURL}
+            alt={animeId}
+            width={1080}
+            height={1080}
+            className=" detimage hover:scale-125 rounded-lg object-cover h-48 w-36 md:h-64 md:w-48 xl:h-96 xl:w-64"
+          />
+          
         </div>
-
-        <Link href={`/AnimeDetails/${animeId}`}>
-          <p className="text-[16px] font-semibold py-1 hover:underline">
-            {datas.animeTitle?.substring(0, 25)}
-          </p>
-        </Link>
-
-        <div className="flex  justify-between gap-5">
-          <p className="text-[14px] font-semibold uppercase">{datas.type}</p>
-          <p className="text-[14px] font-semibold uppercase">
-            {datas.episodes} Epi
-          </p>
-          <Link href={`/AnimeDetails/${animeId}`}>
-            <p className="text-[14px] font-semibold uppercase hover:text-[#7053ff]">
-              View More
-            </p>
-          </Link>
-        </div>
-        <AddButton animeId={datas.animeId} animeTitle={datas.animeTitle} imageURL={datas.imageURL}/>
+      </Link>
         {!isLoading && (
           <RemoveAnime animeId={datas.animeId} />)}
-        {/* if(user){
-          <RemoveAnime animeId={datas.animeId} uid={user.uid}/>
-        } */}
+        {/* <AddButton animeId={datas.animeId} animeTitle={datas.animeTitle} imageURL={datas.imageURL}/> */}
+        
       </div>
     </div>
   );

@@ -7,9 +7,10 @@ const AddToWishlistButton = ({ animeId , animeTitle, imageURL}) => {
     // Call your function to add the anime to the wishlist based on the animeId
     addAnimeToWishlist(animeId, animeTitle, imageURL);
   };
+  // console.log(animeId, animeTitle , imageURL);
 
   return (
-    <button onClick={handleAddToWishlist} className='w-full h-full items-center justify-center'>Add to Wishlist</button>
+    <button onClick={handleAddToWishlist} className='bg-[#7053ff] text-sm md:text-base lg:text-lg xl:text-[22px] font-semibold h-8 md:h-12 w-full rounded-lg my-5 text-black'>Add to Wishlist</button>
   );
 };
 

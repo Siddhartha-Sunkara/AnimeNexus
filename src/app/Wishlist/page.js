@@ -22,7 +22,7 @@ const page = () => {
           // console.log(animeData);
           const res= JSON.stringify(animeData)
           const res1 = JSON.parse(res);
-          console.log(res1)
+          // console.log(res1)
           setAnimeList(res1 || []); 
           setLoading(false);
         } catch (error) {
@@ -34,19 +34,20 @@ const page = () => {
       fetchAnimeData();
    
     
-  }, [user,authContext.isUserFetched, animeList]);
+  }, [authContext.isUserFetched, animeList]);
 
-console.log(animeList)
+// console.log(animeList)
   return (
-    <div className='text-white'>
-      Wish list
-      <div className='text-white'>
-      {animeList.map((anime) => (
-        <div key={anime.animeId}>{anime.animeId }</div>
-      ))}
+    <div className='flex flex-col '>
+
+   
+    <div className=" text-[48px] md:text-[80px] lg:text-[100px] xl:text-[120px] items-center flex flex-col  font-['dark'] text-white ">
+      Wishlist
+      <div className='w-[100%]'>
+      
 
       <div className="w-full flex justify-center">
-              <div className="flex flex-col md:flex-row flex-wrap  w-[80vw] gap-10 items-center px-0 sm:px-10 xl:px-20 justify-start">
+              <div className="flex  flex-row flex-wrap   gap-10 items-center px-0 sm:px-5 xl:px-10 justify-center">
                 {/* <Searchbar onSearch={handleSearch}/> */}
                 {Array.isArray(animeList) &&
                   animeList
@@ -54,6 +55,7 @@ console.log(animeList)
                     .map((datas) => <WishlistCard key={datas.animeId} {...datas} />)}
               </div>
             </div>
+    </div>
     </div>
     </div>
   )

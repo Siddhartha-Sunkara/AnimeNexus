@@ -9,7 +9,7 @@ export default async function Top10() {
     <div className="flex flex-col gap-2 p-5">
       <div className="text-white flex  font-['dark'] text-2xl md:text-3xl xl:text-4xl items-end justify-between">
         <p>Fan Favourite</p>
-        <Link href="#" className="text-xl xl:text-2xl">View All</Link>
+        <Link href="/ViewAllFanFavourite" className="text-xl xl:text-2xl">View All</Link>
       </div>
       <div className="text-white w-full  flex gap-8 items-center overflow-x-scroll ">
         {Array.isArray(data) &&

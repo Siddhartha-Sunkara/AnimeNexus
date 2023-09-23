@@ -19,7 +19,7 @@ const Fav = () => {
               alt="fav"
             />
           </div>
-          <Link href="/TopAnime" className="flex items-center">
+          <Link href="/Explore" className="flex items-center">
             <button className="w-36 h-14 bg-[#7053ff] text-white text-base rounded-[16px]  ">
               Explore more
             </button>

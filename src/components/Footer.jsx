@@ -15,8 +15,8 @@ const Footer = () => {
           </ul>
           <ul className="flex flex-col gap-5 text-[28px]">
             <Link href='/First/1'><li>Home</li></Link>
-            <Link href='/TopAnime'><li>Top Anime</li></Link>
-            <Link href='/Suggestions'><li>Suggestions</li></Link>
+            <Link href='/Explore'><li>Explore</li></Link>
+            <Link href='/Wishlist'><li>Wishlist</li></Link>
 
           </ul>
         </div>
