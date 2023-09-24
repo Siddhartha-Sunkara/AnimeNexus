@@ -61,7 +61,7 @@ const Page = async ({ params }) => {
               </div>
 
               <div>
-                <div className="h-12 w-40 text-[#040203] rounded-[24px] bg-[#7053ff] items-center justify-center">
+                <div className="h-12 w-40 text-[#040203] rounded-[24px] bg-[#7053ff] flex items-center justify-center">
                   <AddToWishlistButton
                     animeId={data[0].id}
                     animeTitle={

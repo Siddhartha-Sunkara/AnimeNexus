@@ -46,7 +46,7 @@ const page = () => {
       <div className='w-[100%]'>
       
 
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-start">
               <div className="flex  flex-row flex-wrap   gap-10 items-center px-0 sm:px-5 xl:px-10 justify-center">
                 {/* <Searchbar onSearch={handleSearch}/> */}
                 {Array.isArray(animeList) &&

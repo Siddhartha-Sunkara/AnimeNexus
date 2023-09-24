@@ -10,7 +10,7 @@ export default async function Top10() {
         <p>Top Anime of All Time</p>
         <Link href="/ViewAllTop10" className="text-xl xl:text-2xl">View All</Link>
       </div>
-      <div className="text-white  flex gap-8 items-center justify-between overflow-x-scroll ">
+      <div className="text-white  flex gap-8 items-center justify-between overflow-x-scroll  ">
         {Array.isArray(data) &&
           data.map((anime) => (
             <div className="flex flex-col  gap-10">

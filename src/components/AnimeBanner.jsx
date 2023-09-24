@@ -1,9 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AddToWishlistButton from "./AddButton";
 const AnimeBanner = ({ anime }) => {
   return (
     <>
+    <div>
+
+    
       <Link href={`/AnimeDetails/${anime.id}`}>
         <div className="rounded-lg overflow-hidden  h-48 w-36 md:h-64 md:w-48 xl:h-48 xl:w-96 relative ">
           <Image
@@ -51,6 +55,9 @@ const AnimeBanner = ({ anime }) => {
           {/* <p className='text-[10px]'>{anime.title.english || anime.title.romaji || anime.title.native}</p> */}
         </div>
       </Link>
+      <p className="w-full flex items-center justify-center h-10 text-[14px] font-semibold py-2">{anime.title.english?.length >31 ?anime.title.english.substring(0,31) + "..." : anime.title.english || anime.title.native.substring(0,31) || anime.title.romaji.substring(0,31)}</p>
+      {/* <AddToWishlistButton animeId={anime.id} animeTitle={anime.title.english || anime.title.native || anime.title.romaji} imageURL={anime.coverImage.extraLarge }/>   */}
+      </div>
     </>
   );
 };

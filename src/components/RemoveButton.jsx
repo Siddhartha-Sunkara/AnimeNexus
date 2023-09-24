@@ -7,7 +7,7 @@ const RemoveAnime = ({ animeId}) => {
     
     // Call your function to add the anime to the wishlist based on the animeId
     await removeAnime(animeId);
-    router.refresh();
+    // router.refresh();
      
   };
 
