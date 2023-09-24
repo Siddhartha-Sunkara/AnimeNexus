@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { getAuth } from "firebase/auth";
+import { getAnalytics } from "firebase/analytics";
 import firebase from 'firebase/app';
 import { getFirestore } from "firebase/firestore";
 import 'firebase/auth';
@@ -15,12 +16,13 @@ const firebaseConfig = {
   projectId: "animenexus-da403",
   storageBucket: "animenexus-da403.appspot.com",
   messagingSenderId: "660708796891",
-  appId: "1:660708796891:web:ddcf16d0befbde48199ffe"
+  appId: "1:660708796891:web:ddcf16d0befbde48199ffe",
+  measurementId: "G-FC1ZE5NHH6"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
+// const analytics = getAnalytics(app);
 export const auth = getAuth(app);
 const db  = getFirestore(app); 
 const config = { app, db };

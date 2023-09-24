@@ -5,7 +5,7 @@ import { UserAuth } from "../app/context/AuthContext";
 import { menuSlide } from '../components/Animation';
 import { motion } from 'framer-motion';
 import Menu from "./Menu";
-const MenuUi = () => {
+const MenuUi = ({isActive, setIsActive}) => {
     const [open, setOpen] = useState(false);
     const { user, googleSignIn, logOut } = UserAuth();
     const [loading, setLoading] = useState(true);
@@ -45,10 +45,14 @@ const MenuUi = () => {
       initial="initial" 
       animate="enter"
       exit="exit"  className="menuui  right-0 z-[10] w-1/3 2xl:w-1/4 text-black bg-white ">
+        <button onClick={() => setIsActive(!isActive, true)} className="right-0 flex justify-end py-10 px-8 absolute ">
+          <div className="cross1 w-8 h-[1px] bg-black absolute"></div>
+          <div className="cross2  w-8 h-[1px] bg-black absolute"></div>
+        </button>
       <div className="items-center justify-center h-full text-[56px] font-['dark'] flex flex-col">
-      <Link className='hover:text-[#7053ff] cursor-pointer' href='/'>Home</Link>
-      <Link className='hover:text-[#7053ff] cursor-pointer' href='/Explore'>Explore</Link>
-      <Link  className='hover:text-[#7053ff] cursor-pointer' href='/Wishlist'>WishList</Link>
+      <Link onClick={() => setIsActive(!isActive, true)} className='hover:text-[#7053ff] cursor-pointer' href='/'>Home</Link>
+      <Link onClick={() => setIsActive(!isActive, true)} className='hover:text-[#7053ff] cursor-pointer' href='/Explore'>Explore</Link>
+      <Link onClick={() => setIsActive(!isActive, true)}  className='hover:text-[#7053ff] cursor-pointer' href='/Wishlist'>WishList</Link>
       {/* <Link className='hover:text-[#7053ff] cursor-pointer' href='/Suggestions'>Suggestions</Link> */}
       
       {loading? null : !user ? (

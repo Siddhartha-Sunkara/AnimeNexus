@@ -10,7 +10,7 @@ const MenuButton = () => {
       <button
             id="menu-btn  "
             onClick={() => setIsActive(!isActive, true)}
-            className={` z-[100] hidden lg:flex hamburger focus:outline-none ${isActive ? "open" : ""
+            className={`  hidden lg:flex hamburger focus:outline-none ${isActive ? "open" : ""
               } `}
           >
             <span className="hamburger-top"></span>
@@ -19,7 +19,7 @@ const MenuButton = () => {
           </button>
           <AnimatePresence mode="wait">
 
-    {isActive && <MenuUi/>}
+    {isActive && <MenuUi isActive={isActive} setIsActive={setIsActive}/>}
           </AnimatePresence>
     </>
   )
