@@ -29,7 +29,7 @@ const AnimeCard = (datas) => {
           
         </div>
       </Link>
-      <p className=" text-white w-full flex items-center justify-center h-10 text-[16px] font-semibold py-2">{animeTitle?.length >31 ?animeTitle.substring(0,31) + "..." : animeTitle}</p>
+      <p className=" text-white w-full flex items-center justify-center h-10 text-[10px] md:text-[12px] xl:text-[14px] font-semibold py-2">{animeTitle?.length >31 ?animeTitle.substring(0,31) + "..." : animeTitle}</p>
 
         {!isLoading && (
           <RemoveAnime animeId={datas.animeId} />)}

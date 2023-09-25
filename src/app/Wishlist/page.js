@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import { getAnime } from '../context/AuthContext';
 import { UserAuth } from '../context/AuthContext';
 import WishlistCard from '../../components/WishlistCard';
+import NoUser from '../../components/NoUser'
+import { ToastContainer, toast } from 'react-toastify';
 const page = () => {
   const user = auth.currentUser;
   const authContext = UserAuth();
@@ -29,6 +31,7 @@ const page = () => {
           console.error("Error fetching anime data:", error);
           setLoading(false); 
       }}
+      
     };
     
       fetchAnimeData();
@@ -40,23 +43,26 @@ const page = () => {
   return (
     <div className='flex flex-col '>
 
-   
-    <div className=" text-[48px] md:text-[80px] lg:text-[100px] xl:text-[120px] items-center flex flex-col  font-['dark'] text-white ">
-      Wishlist
-      <div className='w-[100%]'>
-      
+   {
+    user ?<div className=" text-[48px] md:text-[80px] lg:text-[100px] xl:text-[120px] items-center flex flex-col  font-['dark'] text-white ">
+    Wishlist
+    <div className='w-[100%]'>
+    
 
-      <div className="w-full flex justify-start">
-              <div className="flex  flex-row flex-wrap   gap-10 items-center px-0 sm:px-5 xl:px-10 justify-center">
-                {/* <Searchbar onSearch={handleSearch}/> */}
-                {Array.isArray(animeList) &&
-                  animeList
-                    .slice(0, 10)
-                    .map((datas) => <WishlistCard key={datas.animeId} {...datas} />)}
-              </div>
+    <div className="w-full flex justify-center xl:justify-start">
+            <div className="flex  flex-row flex-wrap   gap-10 items-center px-5 sm:px-5 xl:px-10 justify-center">
+              {/* <Searchbar onSearch={handleSearch}/> */}
+              {Array.isArray(animeList) &&
+                animeList
+                  .slice(0, 10)
+                  .map((datas) => <WishlistCard key={datas.animeId} {...datas} />)}
             </div>
-    </div>
-    </div>
+          </div>
+  </div>
+  </div> :  <NoUser/> 
+   }
+    
+    
     </div>
   )
 }

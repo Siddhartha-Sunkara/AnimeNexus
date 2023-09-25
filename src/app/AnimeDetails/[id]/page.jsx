@@ -3,6 +3,9 @@ import { getAnimebyId } from "../../../lib/Calls";
 import Image from "next/image";
 import Link from "next/link";
 import AddToWishlistButton from "../../../components/AddButton";
+import { ToastContainer, toast } from 'react-toastify';
+
+
 const Page = async ({ params }) => {
   const id = params.id;
   console.log(id);
@@ -141,7 +144,10 @@ const Page = async ({ params }) => {
             </div>
           </div>
         </div>
+
+
       </div>
+      
     </>
   );
 };
