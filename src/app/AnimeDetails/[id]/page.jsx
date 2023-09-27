@@ -26,14 +26,15 @@ const Page = async ({ params }) => {
         </div>
       </div>
       <div className="text-white">
-        <div className=" h-full xl:h-[60vh] hero flex  bg-red-400">
-          <div className="left w-full 2xl:w-[60%] flex flex-col items-center md:items-start justify-center md:flex-row h-full  bg-[#0c0a0b] text-[#faf4fa] ">
-            <div className="img w-[200px] h-[300px] m-10">
+        <div className=" h-full hero flex items-center justify-center bg-black">
+          <div className="left w-full flex flex-col items-center md:items-start justify-center md:flex-row h-full  bg-[#0c0a0b] text-[#faf4fa] ">
+            <div className="img rounded-lg w-[200px] h-[300px] m-10">
               <Image
                 src={data[0].coverImage.extraLarge}
                 alt={data[0].id}
                 width={200}
                 height={300}
+                className="rounded-lg"
               />
             </div>
             <div className="content flex flex-col items-center md:items-start md:justify-start justify-center gap-10 p-1 md:p-10 w-[90%] md:w-[70%]">
@@ -81,7 +82,8 @@ const Page = async ({ params }) => {
                   <span className="font-semibold text-[18px]  md:text-base">
                     Synopsis:
                   </span>
-                  <p>{data[0].description.substring(0, 600)}...</p>
+                  {/* <p>{}</p> */}
+                  <div dangerouslySetInnerHTML={{ __html: data[0].description }}  />
                   {/* <details>
                 {data[0].description.substring(550)}
                 </details> */}
@@ -89,7 +91,7 @@ const Page = async ({ params }) => {
               </div>
             </div>
           </div>
-          <div className="right w-[40%] hidden  2xl:flex justify-center bg-[#040203] text-[#faf4fa]">
+          {/* <div className="right w-[40%] hidden  2xl:flex justify-center bg-[#040203] text-[#faf4fa]">
             <div className="w-[60%] bg-[#0c0a0b] p-10 flex items-start justify-center">
               <div className="flex flex-col gap-5">
                 <div>
@@ -140,9 +142,9 @@ const Page = async ({ params }) => {
                     See this on <span className=""> MyAnimeList</span>
                   </p>
                 </Link> */}
-              </div>
-            </div>
-          </div>
+              {/* </div>
+            </div> */}
+          {/* </div>  */}
         </div>
 
 

@@ -52,7 +52,8 @@ const AnimeCardSlider = ({ anime }) => {
        
         </Link>
         </div>
-        <p className=" text-white w-full flex items-center justify-center h-10 text-[8px] md:text-[10px] xl:text-[14px] font-semibold py-2">{anime.title.english?.length >31 ?anime.title.english.substring(0,31) + "..." : anime.title.english || anime.title.romaji?.length >15 ?anime.title.romaji.substring(0,31) + "..." : anime.title.romaji || anime.title.native?.length >15 ?anime.title.native.substring(0,31) + "..." : anime.title.native}</p>
+      <p className=" text-white w-full flex items-center justify-center h-10 text-[8px] md:text-[10px] xl:text-[14px] font-semibold py-2">{(anime.title.english?.length >31 ?anime.title.english.substring(0,31) + "..." : anime.title.english )|| (anime.title.romaji?.length >30 ?anime.title.romaji.substring(0,15) + "..." : anime.title.romaji) || (anime.title.native?.length >30 ?anime.title.native.substring(0,15) + "..." : anime.title.native)}</p>
+       
       {/* <AddToWishlistButton animeId={anime.id} animeTitle={anime.title.english || anime.title.native || anime.title.romaji} imageURL={anime.coverImage.extraLarge }/>   */}
       
 

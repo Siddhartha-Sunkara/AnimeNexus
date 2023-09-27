@@ -50,7 +50,7 @@ body {
   font-size: inherit;
   background-color: #f4f2f2;
   border: none;
-  color: #646464;
+  color: black;
   padding: 0.7rem 1rem;
   border-radius: 30px;
   width: 100%;
@@ -68,8 +68,8 @@ body {
 }
 
 .search__input::-webkit-input-placeholder {
-  font-weight: 100;
-  color: #ccc;
+  font-weight: 200;
+  color: black;
 }
 
 .search__input:focus + .search__button {
