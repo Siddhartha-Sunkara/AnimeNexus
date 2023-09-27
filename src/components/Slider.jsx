@@ -55,7 +55,7 @@ const Slider = ({firstPage}) => {
               <Link href={`Details/${dataset._id}`}>
               <div className="w-[200px] h-[300px]  hover:scale-110">
              
-                <Image src={dataset.image} alt="" width={200} height={300} />
+                <Image src={dataset.image} alt={dataset._id} width={200} height={300} />
               
               </div></Link>
               </div>

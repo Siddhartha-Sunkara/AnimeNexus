@@ -65,6 +65,7 @@ const Hero = () => {
                   priority={true}
                   width={1080}
                   height={1080}
+                  alt="naruto"
                   className="object-cover"
                 />
               </div>
@@ -188,6 +189,7 @@ const Hero = () => {
               <div className="lower h-[50%]  ">
                 <Image
                 placeholder="blur"
+                alt="naruto"
                   src={ds1}
                   priority={true}
                   width={1080}

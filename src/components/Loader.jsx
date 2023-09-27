@@ -71,37 +71,37 @@ const Loader = ({ setShowLoader }) => {
         <motion.div variants={imageUp}
           initial="hidden"
           animate="show" className="w-[100%] h-[60%]  flex items-center  gap-10 justify-center mt-20 ">
-        <img
+        <Image
           src="/assets/main1.webp"
           width={275}
           height={300}
-          
+          alt="main1.webp"
           className="h-full"
-          
+          priority={true}
         />
-        <img
+        <Image
           src="/assets/main2.webp"
           width={275}
           height={300}
-          
+          alt="main2.webp"
           className="hidden md:flex h-full"
-          
+          priority={true}
         />
-        <img
+        <Image
           src="/assets/main3.webp"
           width={275}
           height={300}
-          
+          alt="main3.webp"
           className=" hidden lg:flex h-full"
-          
+          priority={true}
         />
-        <img
+        <Image
           src="/assets/main6.webp"
           width={275}
           height={300}
-          
+          alt="main6.webp"
           className=" hidden xl:flex h-full"
-          
+          priority={true}
         />
         {/* <motion.img
           src="/assets/naruto1.webp"

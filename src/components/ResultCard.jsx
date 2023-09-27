@@ -21,7 +21,7 @@ const AnimeCard = (datas) => {
           <Link href={`/AnimeDetails/${datas?.id}`}>
             <Image
               src={datas?.coverImage?.extraLarge}
-              alt=""
+              alt={datas.id}
               width={200}
               height={300}
               className="card-image  w-full h-full hover:scale-110 overflow-clip"

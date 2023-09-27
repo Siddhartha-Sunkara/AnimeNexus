@@ -9,6 +9,7 @@ const MenuButton = () => {
     <>
       <button
             id="menu-btn  "
+            aria-labelledby="menu-btn"
             onClick={() => setIsActive(!isActive, true)}
             className={`  hidden lg:flex hamburger focus:outline-none ${isActive ? "open" : ""
               } `}
