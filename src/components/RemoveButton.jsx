@@ -19,7 +19,7 @@ const RemoveAnime = ({ animeId}) => {
       progress: undefined,
       theme: "colored",
       });
-    // router.refresh();
+    router.refresh();
      
   };
 

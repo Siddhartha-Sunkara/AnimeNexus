@@ -1,5 +1,7 @@
 "use client"
-import React, { useContext, useState } from 'react'
+
+import { useContext, createContext, useState } from "react";
+
 import {auth} from '../../app/firebase'
 import { useEffect } from 'react';
 import { getAnime } from '../context/AuthContext';
@@ -14,6 +16,7 @@ const page = () => {
   const [loading, setLoading] = useState(true);
   const [mounted , setMounted]= useState(false);
   
+ 
 
 
   useEffect(() => {

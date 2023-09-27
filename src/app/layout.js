@@ -2,6 +2,7 @@ import Header from '../components/Header'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import {AuthContextProvider} from  './context/AuthContext'
+import {WishListContextProvider} from './context/WishListContext'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const inter = Inter({ subsets: ['latin'] })
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <AuthContextProvider>
+        <WishListContextProvider>
         <Header />
         
         {children}
@@ -34,6 +36,7 @@ pauseOnHover
 theme="light"
         
 />
+        </WishListContextProvider>
         </AuthContextProvider>
       </body>
     </html>

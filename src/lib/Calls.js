@@ -586,7 +586,7 @@ export async function getAnimebyId(id) {
   const variables = {
     id: id,
   };
-  console.log("id", id);
+  // console.log("id", id);
   const url = "https://graphql.anilist.co";
   const options = {
     method: "POST",

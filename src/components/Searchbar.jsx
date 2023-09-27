@@ -7,7 +7,7 @@ const Searchbar = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setSearchTerm(event.target.value);
-    console.log(searchTerm);
+    // console.log(searchTerm);
    
     // console.log(data);
   }

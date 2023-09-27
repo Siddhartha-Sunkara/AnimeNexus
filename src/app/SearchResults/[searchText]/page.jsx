@@ -4,7 +4,7 @@ import ResultCard from '../../../components/ResultCard'
 import AnimeCardSlider from '../../../components/AnimeCardSlider';
 export default async function SearchResults({params}) {
   const searchText = params.searchText;
-  console.log(searchText);
+  // console.log(searchText);
  
    const data = await searchAnime(searchText);
     // Rest of your code for rendering the data 

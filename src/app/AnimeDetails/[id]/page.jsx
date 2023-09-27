@@ -8,10 +8,10 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Page = async ({ params }) => {
   const id = params.id;
-  console.log(id);
+  // console.log(id);
   const data = await getAnimebyId(id);
 
-  console.log(data[0]);
+  // console.log(data[0]);
 
   return (
     <>
@@ -27,14 +27,14 @@ const Page = async ({ params }) => {
       </div>
       <div className="text-white">
         <div className=" h-full hero flex items-center justify-center bg-black">
-          <div className="left w-full flex flex-col items-center md:items-start justify-center md:flex-row h-full  bg-[#0c0a0b] text-[#faf4fa] ">
+          <div className="left  w-full flex flex-col items-center md:items-start justify-center md:flex-row h-full  bg-[#0c0a0b] text-[#faf4fa] ">
             <div className="img rounded-lg w-[200px] h-[300px] m-10">
               <Image
                 src={data[0].coverImage.extraLarge}
                 alt={data[0].id}
                 width={200}
                 height={300}
-                className="rounded-lg"
+                className="rounded-lg "
               />
             </div>
             <div className="content flex flex-col items-center md:items-start md:justify-start justify-center gap-10 p-1 md:p-10 w-[90%] md:w-[70%]">
@@ -78,16 +78,16 @@ const Page = async ({ params }) => {
                 </div>
               </div>
               <div className="synopsis">
-                <p className="text-justify flex flex-col gap-1 text-[14px] md:text-[14px] py-10 md:py-0">
+                <div className="text-justify flex flex-col gap-1 text-[14px] md:text-[14px] py-10 md:py-0">
                   <span className="font-semibold text-[18px]  md:text-base">
                     Synopsis:
                   </span>
                   {/* <p>{}</p> */}
-                  <div dangerouslySetInnerHTML={{ __html: data[0].description }}  />
+                  <p dangerouslySetInnerHTML={{ __html: data[0].description }}  />
                   {/* <details>
                 {data[0].description.substring(550)}
                 </details> */}
-                </p>
+                </div>
               </div>
             </div>
           </div>
